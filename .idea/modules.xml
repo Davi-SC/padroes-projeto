@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/padroes-projeto.iml" filepath="$PROJECT_DIR$/padroes-projeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singleton/singleton.iml" filepath="$PROJECT_DIR$/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singleton/src/src.iml" filepath="$PROJECT_DIR$/singleton/src/src.iml" />
     </modules>
   </component>
 </project>
