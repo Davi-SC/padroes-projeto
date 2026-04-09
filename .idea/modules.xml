@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/exercicios-prova01/exercicios-prova01.iml" filepath="$PROJECT_DIR$/exercicios-prova01/exercicios-prova01.iml" />
       <module fileurl="file://$PROJECT_DIR$/padroes-projeto.iml" filepath="$PROJECT_DIR$/padroes-projeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicios-prova01/questao01/questao01.iml" filepath="$PROJECT_DIR$/exercicios-prova01/questao01/questao01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicios-prova01/questao02/questao02.iml" filepath="$PROJECT_DIR$/exercicios-prova01/questao02/questao02.iml" />
       <module fileurl="file://$PROJECT_DIR$/singleton/singleton.iml" filepath="$PROJECT_DIR$/singleton/singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/singleton/src/src.iml" filepath="$PROJECT_DIR$/singleton/src/src.iml" />
+      <module fileurl="file://$PROJECT_DIR$/state/state.iml" filepath="$PROJECT_DIR$/state/state.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template-method/template-method.iml" filepath="$PROJECT_DIR$/template-method/template-method.iml" />
     </modules>
   </component>
 </project>

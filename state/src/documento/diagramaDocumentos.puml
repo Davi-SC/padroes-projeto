@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 600 width
+scale 800 height
+[*] --> Rascunho
+
+state Rascunho {
+  /'[*] --> Idle
+  Idle --> Configuring : EvConfig
+  Configuring --> Idle : EvConfig'/
+}
+
+state Revisão {
+    '[*] --> AguardandoRevisao
+    'AguardandoRevisao --> Aprovado
+    'AguardandoRevisao --> Negado
+    'AguardandoRevisao --> VoltarRevisao
+
+    'Aprovado --> Publicado
+    'VoltarRevisao --> Rascunho
+}
+
+Negado --> [*]
+Rascunho --> Revisão
+Revisão --> Rascunho
+Revisão --> Negado
+Revisão --> Publicado
+Publicado --> [*]
+
+@enduml
