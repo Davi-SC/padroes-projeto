@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 600 width
+scale 800 height
+[*] --> Reproduzindo
+Pausado --> Reproduzindo
+Parado --> Reproduzindo
+Reproduzindo --> Pausado
+Reproduzindo --> Parado
+Pausado --> Parado
+
+Parado --> [*]
+
+@enduml
+@enduml
