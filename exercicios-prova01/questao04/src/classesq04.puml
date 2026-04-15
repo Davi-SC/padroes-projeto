@@ -13,6 +13,4 @@ PlayerState <|-- Pausado
 PlayerState <|-- Parado
 PlayerState <|-- Reproduzindo
 
-
-
 @enduml
