@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ConfiguracaoSingleton(){
+    -instance: ConfiguracaoSingleton
+    -Singleton(): void
+    +getInstance: Singleton
+}
+
+@enduml
