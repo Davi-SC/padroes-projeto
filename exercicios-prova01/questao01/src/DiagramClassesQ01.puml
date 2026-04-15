@@ -1,18 +1,41 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class Exporter{
-+ templateRelatorio()
-+ buscarDados()
-+ limparDados()
-+ gerarArquivo()
-+ exportarRelatorio()
+'abstract class Exporter{
+'+ templateRelatorio()
+'+ buscarDados()
+'+ limparDados()
+'+ gerarArquivo()
+'+ imprimirRelatorio()
+'}
+
+'class PDFExporter extends Exporter{}
+'class CSVExporter extends Exporter{}
+'class XMLExporter extends Exporter{}
+
+interface ExportStrategy{
+    + exportar() : void
 }
 
-class PDFExporter extends Exporter{}
-class CSVExporter extends Exporter{}
-class XMLExporter extends Exporter{}
+class ReportExporter{
+    - strategy: ExportStrategy
+    + setStrategy(strategy : ExportStrategy)
+    + gerarRelatorio()
+}
 
+class PDFExportStrategy implements ExportStrategy{
+    + exportar() : void
+}
+
+class CSVExportStrategy implements ExportStrategy{
+    + exportar() : void
+}
+
+class XMLExportStrategy implements ExportStrategy{
+    + exportar() : void
+}
+
+ReportExporter o-- ExportStrategy
 
 
 @enduml
