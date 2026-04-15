@@ -18,9 +18,18 @@ a) Escolha o padrão de projeto mais adequado;
 
 b) Justifique por que ele deve ser usado nesse caso;
 - O Singleton é o mais adequado pois limita a criação de uma unica instancia
+Em topicos:
+- O singleton garante instancia única, controlando o ciclo de vida da classe de configuração e impedindo multiplas instancias
+- Oferece um método estatico que permite acessar a configuração e qualquer parte do sistema
+- Como todos os modulos compartilham a mesma instancia, alterações nos parametros refletem em todo o sistema
+- Eficiencia de memoria, evitando objetos redundantes
 
 c) Explique quais problemas podem surgir caso múltiplas instâncias sejam criadas;
 - Se multiplas instancias a classe de configuração forem criadas, pode acontecer de mais de uma delas serem diferentes e gerarem conflitos
+Outros problemas:
+- Inconsistencia de configuração: conforme dito a cima
+- Dificuldade de manutenção: uma mudança na configuração deve modificar todas as instancias
+- Desperdicio de recursos: cada intancia replicada consome memória e pode impactar performance
 
 d) Elabore o diagrama de classes;
 @startuml

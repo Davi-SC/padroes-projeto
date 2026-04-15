@@ -1,9 +1,17 @@
 @startuml
 'https://plantuml.com/class-diagram
 class ConfiguracaoSingleton(){
-    -instance: ConfiguracaoSingleton
-    -Singleton(): void
-    +getInstance: Singleton
+    {static} - instance: ConfiguracaoSingleton
+    - urlBanco: String
+    - usuario: String
+    - senha: String
+    - portaServidor: int
+    - idiomaPadrao: String
+
+    -ConfiguracaoSingleton(): void
+    {static} + getInstance(): Singleton
+
+    +Getters e Setters()
 }
 
 @enduml
