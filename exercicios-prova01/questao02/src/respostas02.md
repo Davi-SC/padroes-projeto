@@ -10,10 +10,13 @@ sistema.**
 **O que se pede:**
 
 a) Escolha o padrão de projeto mais adequado;
+- O padrão mais adequado é o Strategy.
 
 b) Justifique a escolha;
+- O strategy permite encapsulamento do método que precisa ser alterado, de forma que as classes específicas implementam a interface principal de estratégia.
 
 c) Mostre como o sistema poderá trocar o comportamento em tempo de execução;
+- O sistema podera trocar o comportamento apenas chamando o método setStrategy, que vai modificar a instancia da classe Strategy sem criar uma nova, e tudo pode seguir em tempo de execução.
 
 d) Elabore o diagrama de classes;
 

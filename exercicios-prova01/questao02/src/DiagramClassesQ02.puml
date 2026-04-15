@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface PromocionalStrategy{
+    + incluirPolitica() : void
+}
+
+class CalculaValor{
+    - strategy: PromocionalStrategy
+    + setStrategy(strategy : PromocionalStrategy)
+    + calcularValor()
+}
+
+class DescontoPercentual implements PromocionalStrategy{
+    + incluirPolitica() : void
+}
+
+class Cashback implements PromocionalStrategy{
+    + incluirPolitica() : void
+}
+
+class FreteGratis implements PromocionalStrategy{
+    + incluirPolitica() : void
+}
+
+CalculaValor o-- PromocionalStrategy
+
+@enduml
