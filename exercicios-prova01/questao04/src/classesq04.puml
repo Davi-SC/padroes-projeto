@@ -1,16 +1,37 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class Pausado
-class Parado
-class Reproduzindo
-interface PlayerState
+class Pausado{
++ play(player: Player): void
++ pause(player: Player): void
++ stop(player: Player): void
+}
+class Parado{
++ play(player: Player): void
++ pause(player: Player): void
++ stop(player: Player): void
+}
+class Reproduzindo{
++ play(player: Player): void
++ pause(player: Player): void
++ stop(player: Player): void
+}
+interface PlayerState{
++ play(player: Player): void
++ pause(player: Player): void
++ stop(player: Player): void
+}
 class Player{
 - PlayerState estado
++ play(): void
++ pause(): void
++ stop(): void
++setEstado(novoestado: PlayerState): void
 }
 
 PlayerState <|-- Pausado
 PlayerState <|-- Parado
 PlayerState <|-- Reproduzindo
+PlayerState o--> Player
 
 @enduml

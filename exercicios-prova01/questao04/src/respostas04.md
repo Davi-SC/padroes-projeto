@@ -19,14 +19,19 @@ condicionais.**
 O que se pede:
 
 a) Identifique o padrão de projeto mais adequado;(0.5)\
-*O padrão mais adequado é o State.*
+O padrão mais adequado é o State.
 
 b) Justifique a escolha;(0.5)\
-*O state é a melhor opção para o caso, pois como ja mostra, o problema envolve os estados do objeto, e seu comportamento muda a partir desses estados.*
+O State é a melhor opção pois:
+- Elimina condicionais complexas, substituindo por classes edicadas para cada estado
+- Cada estado encapsula sua propria lógica para as ações, facilitando testes e modificações futuras
+- As mudanças e estado são controladas pelos proprios objetos de estado, centralizando a lógica de transição
+- Adicionar um novo estado requer criar apenas uma nova classe.
 
 c) Explique como os comportamentos mudam de acordo com o estado;(1)\
-*A partir do estado do objeto(player), o comportamento dele será alterado. O objeto não precisa ser criado novamente, a sua instancia muda a partir dos métodos implementados.*
+A classe player mantem uma referencia para um objeto PlayerState, quando p usuário chama player.play() o Player delega a execução para o metodo play() o estado atual.
 
 d) Elabore o diagrama de classes (1);
+
 
 e) Implemente a solução em Java (2).

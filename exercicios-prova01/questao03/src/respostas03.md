@@ -19,11 +19,15 @@ a) Identifique o padrão de projeto mais adequado;
 
 b) Justifique por que ele resolve bem o problema;
 
-- O Template Method resolve o problema pois utiliza uma superclasse que define o fluxo das etapas e implementa as etapas que são comuns a todos os tipos de documentos. Dessa forma, a parte que cada SubClasse implementa de forma específica, é a única a ser sobreescrita.
+O Template Method resolve o problema pois :
+- Define o esqueleto do algoritmo em um metodo final da classe abstrata, garantindo a sequencia de passos
+- Implementa os passos que são constantes diretamente na superclasse, evitando duplicação de codigo
+- Declara os passos que variam como metodos abstratos forçando as subclasses a implementarem apenas o que é específico de cada uma
 
 c) Explique como ele ajuda a manter o fluxo fixo e variar apenas partes específicas;
 
-- Mesma justificativa que dei antes.
+O método principal é declarado como final na classe abstrata, impedindo que subclasses alterem a sequencia de execução dos passos.
+Apenas o metodo que varia é declarado como abstrato, o resto é herdao pronto, garantindo consistência e evitando repetição de codigo
 
 d) Elabore o diagrama de classes;
 
