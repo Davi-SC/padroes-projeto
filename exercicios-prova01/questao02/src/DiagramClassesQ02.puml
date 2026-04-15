@@ -2,27 +2,29 @@
 'https://plantuml.com/class-diagram
 
 interface PromocionalStrategy{
-    + incluirPolitica() : void
+    + aplicar(valor:double) : double
 }
 
-class CalculaValor{
-    - strategy: PromocionalStrategy
-    + setStrategy(strategy : PromocionalStrategy)
-    + calcularValor()
+class CalculadoraValor{
+    - politicaStrategy: PromocionalStrategy
+    + setStrategy(politica: PromocionalStrategy): void
+    + calcularValor(valorBase: double): double
 }
 
 class DescontoPercentual implements PromocionalStrategy{
-    + incluirPolitica() : void
+    -percentual: double
+    + aplicar() : void
 }
 
 class Cashback implements PromocionalStrategy{
-    + incluirPolitica() : void
+    -percentual: double
+    + aplicar() : void
 }
 
 class FreteGratis implements PromocionalStrategy{
-    + incluirPolitica() : void
+    - valorFrete: double
+    + aplicar() : void
 }
-
-CalculaValor o-- PromocionalStrategy
+CalculadoraValor o-- PromocionalStrategy
 
 @enduml
