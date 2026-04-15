@@ -13,12 +13,20 @@ Todos os documentos seguem um fluxo semelhante:**
 **Apesar de o fluxo geral ser o mesmo, o conteúdo do corpo do documento muda conforme o tipo de documento emitido. A equipe quer evitar duplicação de código.\
 O que se pede:**
 
-   a) Identifique o padrão de projeto mais adequado;
+a) Identifique o padrão de projeto mais adequado;
 
-   b) Justifique por que ele resolve bem o problema;
+- O padrão mais adequado é o template method.
 
-   c) Explique como ele ajuda a manter o fluxo fixo e variar apenas partes específicas;
+b) Justifique por que ele resolve bem o problema;
 
-   d) Elabore o diagrama de classes;
+- O Template Method resolve o problema pois utiliza uma superclasse que define o fluxo das etapas e implementa as etapas que são comuns a todos os tipos de documentos. Dessa forma, a parte que cada SubClasse implementa de forma específica, é a única a ser sobreescrita.
 
-   e) Implemente a solução em Java.
+c) Explique como ele ajuda a manter o fluxo fixo e variar apenas partes específicas;
+
+- Mesma justificativa que dei antes.
+
+d) Elabore o diagrama de classes;
+
+
+
+e) Implemente a solução em Java.

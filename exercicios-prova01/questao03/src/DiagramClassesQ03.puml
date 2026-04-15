@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class GeradorDocumento{
++ templateRelatorio(): void
++ buscarDados(): void
++ montarCabecalho(): void
++ gerarCorpoDocumento(): void
++ assinarDigitalmente(): void
++ disponibilizarDownload(): void
+}
+
+class Declaracao extends GeradorDocumento{
++ gerarCorpoDocumento(): void
+}
+class Historico extends GeradorDocumento{
++ gerarCorpoDocumento(): void
+}
+class Certificado extends GeradorDocumento{
++ gerarCorpoDocumento(): void
+}
+
+
+@enduml
